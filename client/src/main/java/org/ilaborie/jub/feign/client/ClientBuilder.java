@@ -2,6 +2,7 @@ package org.ilaborie.jub.feign.client;
 
 import feign.Feign;
 import feign.gson.GsonDecoder;
+import feign.gson.GsonEncoder;
 
 /**  */
 public final class ClientBuilder {
@@ -13,6 +14,7 @@ public final class ClientBuilder {
     public static CatClient create(String url) {
         return Feign.builder()
                 .decoder(new GsonDecoder())
+                .encoder(new GsonEncoder())
                 .target(CatClient.class, url);
     }
 }

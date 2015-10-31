@@ -14,17 +14,17 @@ public class CatClientTest {
 
         process("Find by id", () -> client.findById(result.get(0).getId()));
         
-//        Cat created = process("Create", () -> {
-//            Cat newCat = new Cat();
-//            newCat.setName("The Dude");
-//            newCat.setRace(Cat.CatRace.Angora);
-//            return client.create(newCat);
-//        });
+        Cat created = process("Create", () -> {
+            Cat newCat = new Cat();
+            newCat.setName("The Dude");
+            newCat.setRace(Cat.CatRace.Angora);
+            return client.create(newCat);
+        });
         
-//        Cat updated = process("Update", () -> {
-//            created.setRace(Cat.CatRace.Sphynx);
-//            return client.update(created.getId(), created);
-//        });
+        Cat updated = process("Update", () -> {
+            created.setRace(Cat.CatRace.Sphynx);
+            return client.update(created.getId(), created);
+        });
         
 //        process("Delete", () -> client.delete(updated.getId()));
     }
