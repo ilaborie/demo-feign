@@ -26,7 +26,7 @@ public class CatClientTest {
             return client.update(created.getId(), created);
         });
         
-//        process("Delete", () -> client.delete(updated.getId()));
+        process("Delete", () -> client.delete(updated.getId()));
     }
     
     private static <T> T process(String name, Supplier<T> supplier) {

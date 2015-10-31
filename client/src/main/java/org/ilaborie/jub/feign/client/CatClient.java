@@ -20,5 +20,6 @@ public interface CatClient {
     @RequestLine("PUT /cat/{id}")
     Cat update(@Param("id") String id, Cat cat);
     
-//    Cat delete(String id);
+    @RequestLine("DELETE /cat/{id}")
+    Cat delete(@Param("id") String id);
 }

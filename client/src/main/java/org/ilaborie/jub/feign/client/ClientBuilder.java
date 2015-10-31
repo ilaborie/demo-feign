@@ -15,6 +15,7 @@ public final class ClientBuilder {
         return Feign.builder()
                 .decoder(new GsonDecoder())
                 .encoder(new GsonEncoder())
+                .requestInterceptor(template -> template.header("Role", "BigBoss"))
                 .target(CatClient.class, url);
     }
 }
