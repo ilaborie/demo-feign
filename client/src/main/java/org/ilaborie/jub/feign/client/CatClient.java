@@ -14,7 +14,11 @@ public interface CatClient {
     @RequestLine("GET /cat/{id}")
     Cat findById(@Param("id") String id);
     
-//    Cat create(Cat cat);
-//    Cat update(String id, Cat cat);
+    @RequestLine("POST /cat")
+    Cat create(Cat cat);
+    
+    @RequestLine("PUT /cat/{id}")
+    Cat update(@Param("id") String id, Cat cat);
+    
 //    Cat delete(String id);
 }
