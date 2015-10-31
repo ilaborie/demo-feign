@@ -9,8 +9,8 @@ public class CatClientTest {
     public static void main(String[] args) {
         CatClient client = ClientBuilder.create("http://localhost:8000");
 
-        process("Find all", client::findAll);
-//        List<Cat> result = process("Find all", client::findAll);
+//        process("Find all", client::findAll);
+        List<Cat> result = process("Find all", client::findAll);
 
 //        process("Find by id", () -> client.findById(result.get(0).getId()));
         

@@ -23,6 +23,11 @@
             <artifactId>feign-core</artifactId>
             <version>${feign.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.netflix.feign</groupId>
+            <artifactId>feign-gson</artifactId>
+            <version>${feign.version}</version>
+        </dependency>
     </dependencies>
     
     
