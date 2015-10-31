@@ -18,6 +18,11 @@
     </properties>
     
     <dependencies>
+        <dependency>
+            <groupId>com.netflix.feign</groupId>
+            <artifactId>feign-core</artifactId>
+            <version>${feign.version}</version>
+        </dependency>
     </dependencies>
     
     

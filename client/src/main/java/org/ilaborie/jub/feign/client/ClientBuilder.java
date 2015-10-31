@@ -1,5 +1,7 @@
 package org.ilaborie.jub.feign.client;
 
+import feign.Feign;
+
 /**  */
 public final class ClientBuilder {
     
@@ -8,6 +10,7 @@ public final class ClientBuilder {
     }
     
     public static CatClient create(String url) {
-        return null;
+        return Feign.builder()
+                .target(CatClient.class, url);
     }
 }
